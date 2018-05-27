@@ -14,6 +14,7 @@ class TreeNode {
         this.val = val;
 
     }
+}
 public class TreeDepth {
     /**
      * 递归
@@ -50,5 +51,9 @@ public class TreeDepth {
         }
         return high;
     }
+    public boolean IsBalanced_Solution(TreeNode root) {
+        if(TreeDepth1(root.left)-TreeDepth1(root.right)>1||TreeDepth1(root.left)-TreeDepth1(root.right)<1)return false;
+        return true;
+    }
 }
-}
+
